@@ -23,7 +23,24 @@ void imprimir(struct Nodo *copia)
      printf("Valor de nodo: %d.\n", tmp->valor);
      tmp=tmp->sig;
     }  
+}
 
+int contar_nodos(struct Nodo *copia)
+{
+    struct Nodo *tmp;
+    tmp = copia;
+    int contador=0;
+    if(copia==NULL)
+    {
+       printf("ERROR: Lista vacía.\n");
+       return; 
+    }
+    while(tmp!=NULL)
+    {
+     contador++;
+     tmp=tmp->sig;
+    }  
+    return contador;
 }
 
 struct Nodo *nuevonodo(int dato)
