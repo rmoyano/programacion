@@ -1,0 +1,54 @@
+Miércoles 30-09-26 
+
+fa@t16:~/repos$ rm -rf programacion
+
+rafa@t16:~/repos$ git clone git@github.com:rmoyano/programacion.git
+Cloning into 'programacion'...
+remote: Enumerating objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3 (from 1)
+Receiving objects: 100% (3/3), done.
+rafa@t16:~/repos$ cd programacion
+rafa@t16:~/repos/programacion$ ls
+holamundo.cpp
+rafa@t16:~/repos/programacion$ ls -a
+.  ..  .git  holamundo.cpp
+rafa@t16:~/repos/programacion$ cd .git/
+rafa@t16:~/repos/programacion/.git$ ls
+branches  config  description  HEAD  hooks  index  info  logs  objects  packed-refs  refs
+rafa@t16:~/repos/programacion/.git$ vi config 
+rafa@t16:~/repos/programacion/.git$ cd ..
+rafa@t16:~/repos/programacion$ ls
+holamundo.cpp
+rafa@t16:~/repos/programacion$ mv ../
+bitbucket/                     linux_networking_11-08-26.txt  programacion1/
+cka/                           locro_lela.odt                 quiosco_4-08-26/
+codewars_15-09-26.txt          locro_lela.pdf                 salsa_debian_7-08-26/
+feralk8s/                      pila_28-09-26.c                tf_proxmox/
+flask_pytest/                  programacion/                  webwml/
+rafa@t16:~/repos/programacion$ mv ../pila_28-09-26.c .
+rafa@t16:~/repos/programacion$ ls
+holamundo.cpp  pila_28-09-26.c
+rafa@t16:~/repos/programacion$ 
+rafa@t16:~/repos/programacion$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	pila_28-09-26.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+rafa@t16:~/repos/programacion$ git add pila_28-09-26.c 
+rafa@t16:~/repos/programacion$ git commit -m 'Initail stack file draft added.'
+[master ede6228] Initail stack file draft added.
+ 1 file changed, 97 insertions(+)
+ create mode 100644 pila_28-09-26.c
+rafa@t16:~/repos/programacion$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 861 bytes | 861.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:rmoyano/programacion.git
+   7e1f105..ede6228  master -> master
